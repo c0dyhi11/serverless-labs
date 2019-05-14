@@ -37,7 +37,7 @@ Deploy your hello world function:
 # First create your ENV
 fission env create --name python --image fission/python-env
 # Second upload your code
-fission fn create --name hello --env python --code hello.py 
+fission fn create --name hello --env python --code fission/hello_world.py
 # Third Expose your function
 fission route create --name hello --function hello --url /hello
 ```
