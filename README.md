@@ -22,7 +22,7 @@ Install Fission
 # Install Fission into your cluster in the fission namespace using Helm
 helm install --name fission --namespace fission --set serviceType=NodePort,routerServiceType=NodePort https://github.com/fission/fission/releases/download/1.2.1/fission-all-1.2.1.tgz
 # Download the fission CLI tool and put it in you path
-curl -Lo fission https://github.com/fission/fission/releases/download/1.2.1/fission-cli-linux && chmod +x fission && sudo mv fission /usr/local/bin/
+curl -Lo ../fission https://github.com/fission/fission/releases/download/1.2.1/fission-cli-linux && chmod +x ../fission && sudo mv ../fission /usr/local/bin/
 # Create generic Ingress rule for Fission
 kubectl -n fission apply -f setup/ingress.yaml
 # List all of the pods in the fission namespace
