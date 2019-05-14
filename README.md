@@ -47,7 +47,7 @@ Now check your function by browsing in you browser to http://$your-ip/hello
 Deploy the guest book app:
 ```bash
 # Create a Redis pod for persistent storage
-kubectl -n fission apply -f fission/guestbook/redis.yaml
+kubectl apply -f fission/guestbook/redis.yaml
 # Upload your get guestbook fucntion
 fission function create --name guestbook-get --env python --code fission/guestbook/get.py 
 # Create a route to the get guestbook function
