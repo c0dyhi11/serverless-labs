@@ -51,10 +51,10 @@ kubectl apply -f fission/guestbook/redis.yaml
 # Upload your get guestbook fucntion
 fission function create --name guestbook-get --env python --code fission/guestbook/get.py 
 # Create a route to the get guestbook function
-fission route create --name guestbook-get --url /guestbook --method GET
+fission route create --name guestbook-get --function guestbook-get --url /guestbook --method GET
 # Upload your add to guestbook function
 fission function create --name guestbook-add --env python --code fission/guestbook/add.py 
 # Create a route to your add to guestbook function
-fission route create --name guestbook-add --url /guestbook --method POST
+fission route create --name guestbook-add --function guestbook-add --url /guestbook --method POST
 ```
 Now checkout your guestbook http://$your-ip/guestbook
